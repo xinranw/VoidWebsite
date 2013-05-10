@@ -1,58 +1,67 @@
-div, head, footer, p, h1, h2, h3, h4, ul, li, a, img, table{
+div, body, head, footer, p, h1, h2, h3, h4, ul, li, a, img, table{
 	margin: 0;
 	padding: 0;
+/*	border: 1px solid white;*/
+}
+
+
+
+header [class*="grid"]{
+	padding: 0;
+}
+
+body{
+	background-image:url('../images/TeamPhotos/sectionalsHuddle2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat no-repeat;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	max-width: 100%;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+body a{
+	color: rgba(255, 255, 255, 0.8);
 }
 
 .unstyled{
 	list-style: none;
 }
 
-
-body{
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	line-height: 20px;
-	margin-top: 0;
-	max-width: 100%;
-}
-
-.header{
-	background-color: purple;
-	height: 160px;
-}
-
-.main{
-	box-shadow: rgb(136, 136, 136) 0px 0px 15px 0px;
-}
-
 header{
+	margin-top: 80px;
+	margin-bottom: 40px;
+	background-color: rgba(0, 0, 0, .9);
+	color: white;
 }
 
-article, footer{
+.logo{
+	background-color: rgba(0, 0, 0, .2);
 }
 
-p{
-	margin-bottom: 10px;
+.logo-image{
+	background-image: url('../images/voidLogo.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	min-height: 170px;
+	margin: 14px 10px;
 }
 
-
-/*****************************************************************
------------------------------Nav Bar------------------------------
-*****************************************************************/
 
 nav{
 	overflow: visible;
-	margin-bottom: 20px;
+	margin-top: 80px;
 }
 
+
 .nav-inner{
-	min-height: 40px;
+	display: block;
 	padding-left: 20px;
 	padding-right: 20px;
-	background: rgb(250, 250, 250) linear-gradient(rgb(255, 255, 255), rgb(242, 242, 242)) repeat-x;
-	border: 1px solid rgb(212, 212, 212);
-	border-radius: 4px;
-	box-shadow: rgba(0, 0, 0, 0.0627451) 0px 1px 4px 0px;	
+	min-height: 40px;
+	/*border: 1px solid rgb(212, 212, 212);*/
 }
 
 .nav-inner:before, .nav-inner:after {
@@ -62,10 +71,9 @@ nav{
 
 .nav{
 	position: relative;
-	left: 0;
+	/*left: 0;*/
 	display: block;
 	float: right;
-	margin-right: 0;
 }
 
 .nav li{
@@ -75,30 +83,34 @@ nav{
 .nav a{ 
 	float: none;
 	padding: 10px 15px 10px;
-	color: #005580; /*#777777*/
+	font-size: 20px;
 	text-decoration: none;
-	text-shadow: 0 1px 0 #ffffff;
+	/*text-shadow: 0 1px 0 #ffffff;*/
 	display: block;
 }
 
 .nav a:focus,
 .nav a:hover,
 .nav a:active{
-	color: #005580;
-	background-color: #e5e5e5;
+	color: blue;
+}
+
+.nav a.selected,
+.nav a.selected.hover{
+	color: rgb(114,18,170);
+	font-weight: bolder;
 }
 
 .dropdown-menu{
 	position: absolute;
-	display: block;
+	display: none;
 	z-index: 1000;
-	list-style: none;
 
-	padding: 2px 0;
-	background-color: #ffffff;
+	padding: 1px 0;
+	background-color: #000000;
 	border: 1px solid rgba(0, 0, 0, 0.2);
-	-webkit-border-radius: 6px;
-	border-radius: 6px;
+	/*-webkit-border-radius: 6px;
+	border-radius: 6px;*/
 	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	-webkit-background-clip: padding-box;
@@ -108,13 +120,13 @@ nav{
 	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px;
 }
 
-.dropdown-menu li{
-	display: none;
+li:focus .dropdown-menu,
+li:hover .dropdown-menu,
+li:active .dropdown-menu{
+	display:block;
 }
 
-li:focus .dropdown-menu li,
-li:hover .dropdown-menu li,
-li:active .dropdown-menu li{
+.dropdown-menu li{
 	clear:both;
 	display: list-item;
 	position: relative;
@@ -124,7 +136,7 @@ li:active .dropdown-menu li{
 }
 
 .dropdown-menu a{
-	padding: 3px 20px;
+	padding: 7px 17px;
 }
 
 .dropdown-menu a:focus,
@@ -141,49 +153,56 @@ li:active .dropdown-menu li{
 .caret{
 	display: inline-block;
 	vertical-align: middle;
-	border-top: 4px solid #000000;
+	border-top: 4px solid #ffffff;
 	border-right: 4px solid transparent;
 	border-left: 4px solid transparent;
 	margin-left: 2px;
 }
 
-
-.box hr{
-	margin-top: 10px;
-	margin-bottom: 10px;
+.content{
+	margin-bottom: 40px;
 }
 
-/*****************************************************
--------------------Aside box------------------------
-*****************************************************/
-.box{
-	border-color: rgb(232, 232, 232);
-	border: 1px solid rgb(232, 232, 232);
-	border-radius: 1em;
+.content p{
+	margin-top: 14px;
+}
+
+.main{
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .95));
+	padding: 20px 10px 30px 10px;
+	
+}
+
+article{
+}
+
+.container{
+	/*padding-right: 10px;*/
+}
+
+.twitter-box{
+	float: right;
+}
+
+.twitter-box a{
+	line-height: 30px;
+}
+
+.twitter-box hr{
+	margin-top: 10px;
 	margin-bottom: 20px;
 }
-.box,
-.box h2,
-.box h2>a{
-	font-family: 'Helvetica Neue', Arial, sans-serif;
-	color: rgb(51, 51, 51);
+
+.twitter-timeline{
+	width: 100%;
 }
 
-/*****************************************************
--------------------Twitter box------------------------
-*****************************************************/
-
-.twitter-box{
+footer{
+	margin-bottom: 40px;
+	padding: 30px 20px 35px 20px;
+	background-color: rgba(0, 0, 0, .9);
 }
 
-.twitter-title{
-	margin-top: 10px;
-	margin-left:10px;
+footer a{
+	text-decoration: none
 }
-
-.twitter-box{
-	border-bottom: 1px solid white;
-	border-bottom-left-radius: 4em;
-	border-bottom-right-radius: 4em;
-}
-

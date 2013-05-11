@@ -29,18 +29,21 @@ header [class*="grid"]{
 }
 
 body{
-	background-image:url('../images/TeamPhotos/sectionalsHuddle1.jpg');
+	background-image:url('../images/teamPhotos/sectionalsHuddle1.jpg');
 	background-size: 100%;
 	background-repeat: no-repeat no-repeat;
+	/*background-attachment: fixed;*/
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 20px;
 	max-width: 100%;
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(255, 255, 255, 0.9);
 }
 
 body a{
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(255, 255, 255, 0.85);
+	text-decoration: none;
+	font-weight: bold;
 }
 
 .unstyled{
@@ -54,7 +57,6 @@ header{
 	margin-top: 80px;
 	margin-bottom: 40px;
 	background-color: rgba(0, 0, 0, .9);
-	color: white;
 }
 
 .logo{
@@ -101,7 +103,7 @@ nav{
 .nav a{ 
 	float: none;
 	padding: 10px 15px 10px 15px;
-	font-size: 20px;
+	font-size: 18px;
 	text-decoration: none;
 	/*text-shadow: 0 1px 0 #ffffff;*/
 	display: block;
@@ -148,9 +150,8 @@ li:active .dropdown-menu{
 	clear:both;
 	display: list-item;
 	position: relative;
-	color: #ffffff;
 	list-style: none;
-	width: 140px;
+	min-width: 140px;
 }
 
 .dropdown-menu a{
@@ -166,15 +167,27 @@ li:active .dropdown-menu{
 	white-space: nowrap;
 	background-color: rgb(0, 129, 194);
 	background-image: linear-gradient(rgb(0, 136, 204), rgb(0, 119, 179));
+	background-image: -moz-linear-gradient(top, rgb(0, 136, 204), rgb(0, 119, 179)); /* Firefox 3.6 */
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(0, 119, 179)),color-stop(1, rgb(0, 136, 204))); /* Safari & Chrome */
+	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='rgb(0, 136, 204)', endColorstr='rgb(0, 119, 179)'); /* IE6 & IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='rgb(0, 136, 204)', endColorstr='rgb(0, 119, 179)')"; /* IE8 */
 }
 
-.caret{
+.nav a .caret{
 	display: inline-block;
 	vertical-align: middle;
 	border-top: 4px solid #ffffff;
 	border-right: 4px solid transparent;
 	border-left: 4px solid transparent;
 	margin-left: 2px;
+}
+
+.nav a:hover .caret,
+.nav a:focus .caret,
+.nav a:active .caret,
+.nav a.selected .caret,
+.nav a.selected:hover .caret{
+	border-top: 4px solid rgb(114,18,170);
 }
 
 /***********************************************************
@@ -190,8 +203,11 @@ li:active .dropdown-menu{
 }
 
 .main{
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .95));
 	padding: 30px 10px 40px 10px;
+	background: rgba(0, 0, 0, .85);
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .95));
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, .7), rgba(0, 0, 0, .95)); /* Firefox 3.6 */
+	background: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgba(0, 0, 0, .95)),color-stop(1, rgba(0, 0, 0, .7))); /* Safari & Chrome */
 }
 
 .mainImage{
@@ -287,35 +303,63 @@ dt:first-child{
 }
 /*dt:nth-last-child(2){
 	border-bottom: 1px solid #c5c5c5;
-}*/
+	}*/
 
 
 /***********************************************************
 -----------------------Twitter Widge------------------------
 ***********************************************************/
+.social{
+	margin: 0 auto;
+	line-height: 0px;
+	min-height: 52px;
+	text-align: justify;
+}
+
+.social .icon{
+	display: inline-block;
+	background: url(../images/icons/socialMediaIcons.png) no-repeat 0 0;
+	background-size: 208px;
+	height: 52px;
+	width: 52px;
+	margin-bottom: 8px;
+}
+
+.social:after {
+  content: '';
+  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+
+.social #facebook{
+	background-position: 0 0;
+}
+
+.social #twitter{
+	background-position: 33% 0;
+}
+
+.social #youtube{
+	background-position: 66.66666666% 0;
+}
+
+.social #wordpress{
+	background-position: 100% 0;
+}
 
 .twitter-box{
 	float: right;
-}
-
-.twitter-box h1{
-	margin-top:20px;
+	margin-top: 15px;
 }
 
 .twitter-box h2{
-	margin-bottom: 18px;
+	margin-bottom:15px;
 }
 
-
-.twitter-box hr{
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
 
 .twitter-timeline{
 	width: 100%;
 }
-
 
 /***********************************************************
 --------------------------Footer----------------------------
@@ -328,6 +372,6 @@ footer{
 }
 
 footer a{
-	text-decoration: none
+	text-decoration: none;
 }
 

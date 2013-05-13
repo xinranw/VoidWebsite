@@ -350,6 +350,8 @@ dt:first-child{
 .twitter-box{
 	float: right;
 	margin-top: 15px;
+	min-width: 0 !important;
+	width: 100%!important;
 }
 
 .twitter-box h2{
@@ -358,7 +360,8 @@ dt:first-child{
 
 
 .twitter-timeline{
-	width: 100%;
+	min-width: 0 !important;
+	width: 100% !important;
 }
 
 /***********************************************************

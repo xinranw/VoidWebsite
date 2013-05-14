@@ -44,50 +44,51 @@
 <body>	
 	<header class="grid-100">
 		<div id="header" class="grid-container">
-			<div class="logo grid-parent grid-85 prefix-10 postfix-5">
-				<div class="grid-30">
+			<div class="logo grid-parent grid-85 push-10 mobile-grid-100">
+				<div class="grid-30 mobile-grid-60 mobile-push-20">
 					<div class="logo-image"></div>
-					<!-- <div class="logo-title">Void</div> -->
 				</div>
-				<nav class="grid-70 pull-right">
-					<div class="nav-inner">
-						<ul class ="nav pull-right unstyled">
-							<li class="alpha"><a href="index.html" class="selected">Home</a></li>
-							<li class = "dropdown">
-								<a href="#">
-									Roster
-									<b class="caret"></b>
-								</a>
-								<ul class = "dropdown-menu">
-									<li><a href="roster.html">Void-A</a></li>
-									<li><a href="oilcan.html">Void-B</a></li>
-								</ul>
-							</li>
-							<li class = "dropdown">
-								<a href="#">
-									Schedule
-									<b class="caret"></b>
-								</a>
-								<ul class = "dropdown-menu">
-									<li><a href="practice.html">Practice</a></li>
-									<li><a href="tournaments.html">Tournaments</a></li>
-								</ul>
-							</li>
-							<li><a href="media.html">Media</a></li>
-							<!-- <li><a href="flickadelphia.html">Flickadelphia</a></li> -->
-							<li><a href="alumni.html">Alumni</a></li>
-							<li><a href="http://www.dolphin.upenn.edu/ultimate/venus/">Venus</a></li>
-							<li class="omega"><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
+				<nav class="grid-70 mobile-grid-100">
+					<button class="nav-button">
+						Menu
+						<b class="caret"></b>
+					</button>
+					<ul class ="nav pull-right unstyled">
+						<li class="alpha"><a href="index.html" class="selected">Home</a></li>
+						<li class = "dropdown">
+							<a href="#">
+								Roster
+								<b class="caret"></b>
+							</a>
+							<ul class = "dropdown-menu">
+								<li><a href="roster.html">Void-A</a></li>
+								<li><a href="oilcan.html">Void-B</a></li>
+							</ul>
+						</li>
+						<li class = "dropdown">
+							<a href="#">
+								Schedule
+								<b class="caret"></b>
+							</a>
+							<ul class = "dropdown-menu">
+								<li><a href="practice.html">Practice</a></li>
+								<li><a href="tournaments.html">Tournaments</a></li>
+							</ul>
+						</li>
+						<li><a href="media.html">Media</a></li>
+						<!-- <li><a href="flickadelphia.html">Flickadelphia</a></li> -->
+						<li><a href="alumni.html">Alumni</a></li>
+						<li><a href="http://www.dolphin.upenn.edu/ultimate/venus/">Venus</a></li>
+						<li class="omega"><a href="contact.html">Contact</a></li>
+					</ul>
 				</nav>
 			</div>
 		</div>
 	</header>
 
 	<div class="content grid-container">
-		<div class="main grid-parent grid-85 prefix-10 postfix-5">
-			<article class="grid-70 alpha">
+		<div class="main grid-parent grid-85 push-10 mobile-grid-100">
+			<article class="grid-70 mobile-grid-100 alpha">
 				<!-- <div class="container"> -->
 				<div class="slideObj">
 					<div class="slider-wrapper theme-default">
@@ -121,7 +122,7 @@
 				<!-- </div> -->
 			</article>
 
-			<aside class="grid-30 pull-right omega">
+			<aside class="grid-30 mobile-grid-100 hide-on-mobile omegahide-on-mobile ">
 				<div class="social">
 					<a href="https://www.facebook.com/pages/VOID-Ultimate-Frisbee/114727355308957" class="icon alpha" id="facebook"></a>
 					<a href="http://www.twitter.com/VoidUltimate" class="icon" id="twitter"></a>
@@ -143,7 +144,7 @@
 
 	<footer class="grid-100">
 		<div class="grid-container">
-			<div class="grid-85 prefix-10 postfix-5">
+			<div class="grid-85 push-10">
 				<p>
 					University of Pennsylvania Void Ultimate &copy; 2013 | Web design and development by: 
 					<a href="xinranw@seas.upenn.edu">Xinran Wang (email)</a> <br>
@@ -163,6 +164,13 @@ $(window).load(function() {
 	$('#slider').nivoSlider({
 		effect: 'fade',
 	});
+});
+</script>
+<script>
+$(document).ready(function(){
+	$(".nav-button").click(function () {
+		$(".nav-button,.nav").toggleClass("open");
+	});    
 });
 </script>
 </html>

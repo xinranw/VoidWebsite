@@ -24,6 +24,23 @@ div, body, head, footer, p, h1, h2, h3, h4, ul, li, a, img, table{
 	display: none;
 }
 
+.caret{
+	display: inline-block;
+	vertical-align: middle;
+	border-top: 4px solid #ffffff;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	margin-left: 2px;
+}
+
+a:hover .caret,
+a:focus .caret,
+a:active .caret,
+a.selected .caret,
+a.selected:hover .caret{
+	border-top: 4px solid rgb(114,18,170);
+}
+
 header [class*="grid"]{
 	padding: 0;
 }
@@ -74,20 +91,18 @@ header{
 
 nav{
 	overflow: visible;
-	margin-top: 80px;
+	margin-top: 8%;
 }
 
-
-.nav-inner{
+/*.nav-inner{
 	display: block;
 	min-height: 40px;
-	/*border: 1px solid rgb(212, 212, 212);*/
 }
 
 .nav-inner:before, .nav-inner:after {
 	display: table;
 	content: "";
-}
+}*/
 
 .nav{
 	position: relative;
@@ -101,7 +116,7 @@ nav{
 }
 
 .nav a{ 
-	float: none;
+	/*float: none;*/
 	padding: 10px 15px 10px 15px;
 	font-size: 18px;
 	text-decoration: none;
@@ -151,6 +166,7 @@ li:active .dropdown-menu{
 	display: list-item;
 	position: relative;
 	list-style: none;
+	width:100%;
 	min-width: 140px;
 }
 
@@ -171,23 +187,6 @@ li:active .dropdown-menu{
 	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, rgb(0, 119, 179)),color-stop(1, rgb(0, 136, 204))); /* Safari & Chrome */
 	filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='rgb(0, 136, 204)', endColorstr='rgb(0, 119, 179)'); /* IE6 & IE7 */
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='rgb(0, 136, 204)', endColorstr='rgb(0, 119, 179)')"; /* IE8 */
-}
-
-.nav a .caret{
-	display: inline-block;
-	vertical-align: middle;
-	border-top: 4px solid #ffffff;
-	border-right: 4px solid transparent;
-	border-left: 4px solid transparent;
-	margin-left: 2px;
-}
-
-.nav a:hover .caret,
-.nav a:focus .caret,
-.nav a:active .caret,
-.nav a.selected .caret,
-.nav a.selected:hover .caret{
-	border-top: 4px solid rgb(114,18,170);
 }
 
 /***********************************************************
@@ -307,7 +306,7 @@ dt:first-child{
 
 
 /***********************************************************
------------------------Twitter Widge------------------------
+----------------------Twitter Widget------------------------
 ***********************************************************/
 .social{
 	margin: 0 auto;
@@ -378,3 +377,140 @@ footer a{
 	text-decoration: none;
 }
 
+/***********************************************************
+--------------------------Mobile----------------------------
+***********************************************************/
+
+.nav-button { display: none; } /* hide the navigation button by default */
+
+@media only screen and (min-width: 0px) and (max-width: 475px) {
+	
+	header, .logo, nav, .nav, footer{
+		margin: 0;
+		padding: 0;
+	}
+
+	body{
+		background-image: url(../images/rallyCatch1.jpg);
+		background-size: 150%;
+		background-position: 65% 0%;
+		background-repeat: no-repeat no-repeat;
+		background-attachment: fixed;
+	}
+
+	header{
+		margin-top: 45px;
+		margin-bottom: 20px;
+	}
+
+
+	.logo-image{
+		min-height: 100px;
+	}
+
+	nav{
+		position: absolute;
+		top: 0;
+	}
+
+	.main{
+		padding-bottom: 20px;
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.social{
+		margin-top: 20px;
+	}
+
+	footer{
+		font-size: 10px;
+		line-height: 14px;
+		padding: 20px 0;
+	}
+
+	/* Navigation Button
+	-------------------------------------------------------- */
+
+	.nav-button {
+		display: block;
+		width: 100px;
+		height: 35px;
+		cursor: pointer;
+		border: 0 none;
+		border-bottom: 1px solid rgba(255,255,255,.1);
+		box-shadow: 0 0 4px rgba(0,0,0,.7) inset;
+		z-index: 999;
+		color: rgb(255, 255, 255);
+		background-color: rgba(0, 0, 0, .75);
+	}
+	.nav-button:hover { 
+		background-color: rgba(0,0,0,1); 
+	}
+
+	/* Navigation Bar
+	-------------------------------------------------------- */
+
+	.nav {
+		width: 94%;
+		position: absolute;
+		left: inherit;
+		background-color: rgba(0, 0, 0, .95); /* change the menu color #238be3 */
+		display: block;
+		overflow: hidden;
+		box-shadow: 0 1px 2px rgba(0,0,0,.6);
+		z-index: 998;
+	}
+
+	.nav li {
+		display: none;
+		width: 100%;
+	}
+	.nav li a {
+		display: block;
+		width: 100%;
+		padding: 2% 5%;
+		font-size: 14px;
+		font-weight: bold;
+		text-shadow: -1px -1px 0 rgba(0,0,0,.15);
+		border-top: 1px solid rgba(255,255,255,.2); 
+	}
+	.nav > li:first-child {
+		border: none;
+	}
+
+	/* Toggle the navigation bar open  */
+	.nav.open li{
+		display: block;
+	}
+
+	/* Submenus – optional .parent class indicates dropdowns */
+
+	.nav .dropdown-menu{
+		position: relative;
+	}
+
+	.nav > li:hover > a {
+	}
+	.nav li.dropdown > a:after {
+		color: rgba(255,255,255,.5);
+		float: right;
+	}
+	.nav li.dropdown > a:hover {
+		background: rgba(0,0,0,.75);
+	}
+	.nav li ul {
+		display: none;
+		border-top: 0 none;
+		padding: 0;
+	}
+	.nav li ul a {
+		border: 0 none;
+		font-size: 12px;
+		padding: 2% 5%;
+		font-weight: normal;
+	}
+	.nav li:hover ul {
+		display: block;
+		border-top: 0 none;
+	}

@@ -87,8 +87,8 @@
 	</header>
 
 	<div class="content grid-container">
-		<div class="main grid-parent grid-85 prefix-10 postfix-5">
-			<article class="contact grid-70 pull-center alpha">
+		<div class="main grid-parent grid-85 prefix-10 postfix-5 mobile-grid-100">
+			<article class="contact grid-70 mobile-grid-100 pull-center alpha">
 				<h1>Contact Us!</h1>
 				<br>
 				Team: <a href="mailto:void.ultimate@gmail.com">void.ultimate@gmail</a>
@@ -102,7 +102,7 @@
 				Webmaster: <a href="mailto:xinranw@seas.upenn.edu">Xinran Wang</a>
 			</article>
 
-			<aside class="grid-30 pull-right omega">
+			<aside class="grid-30 pull-right hide-on-mobile omega">
 				<div class="social">
 					<a href="https://www.facebook.com/pages/VOID-Ultimate-Frisbee/114727355308957" class="icon alpha" id="facebook"></a>
 					<a href="http://www.twitter.com/VoidUltimate" class="icon" id="twitter"></a>
@@ -144,6 +144,13 @@ $(window).load(function() {
 	$('#slider').nivoSlider({
 		effect: 'fade',
 	});
+});
+</script>
+<script>
+$(document).ready(function(){
+	$(".nav-button").click(function () {
+		$(".nav-button,.nav").toggleClass("open");
+	});    
 });
 </script>
 </html>

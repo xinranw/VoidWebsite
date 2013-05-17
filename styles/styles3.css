@@ -73,6 +73,8 @@ body a{
 header{
 	margin-top: 80px;
 	margin-bottom: 40px;
+	padding-top: 14px;
+	padding-bottom: 14px;
 	background-color: rgba(0, 0, 0, .9);
 }
 
@@ -84,9 +86,9 @@ header{
 	background-image: url('../images/voidLogo.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
-	background-position: center;
+	background-position: center center;
 	min-height: 170px;
-	margin: 14px 10px;
+	margin: 0px 10px;
 }
 
 nav{
@@ -102,48 +104,48 @@ nav{
 .nav-inner:before, .nav-inner:after {
 	display: table;
 	content: "";
-}*/
+	}*/
 
-.nav{
-	position: relative;
-	/*left: 0;*/
-	display: block;
-	/*float: right;*/
-}
+	.nav{
+		position: relative;
+		/*left: 0;*/
+		display: block;
+		/*float: right;*/
+	}
 
-.nav li{
-	float: left;
-}
+	.nav li{
+		float: left;
+	}
 
-.nav a{ 
-	/*float: none;*/
-	padding: 10px 15px 10px 15px;
-	font-size: 18px;
-	text-decoration: none;
-	/*text-shadow: 0 1px 0 #ffffff;*/
-	display: block;
-}
+	.nav a{ 
+		/*float: none;*/
+		padding: 10px 15px 10px 15px;
+		font-size: 18px;
+		text-decoration: none;
+		/*text-shadow: 0 1px 0 #ffffff;*/
+		display: block;
+	}
 
-.nav a:focus,
-.nav a:hover,
-.nav a:active{
-	color: rgb(114,18,170);
-}
+	.nav a:focus,
+	.nav a:hover,
+	.nav a:active{
+		color: rgb(114,18,170);
+	}
 
-.nav a.selected,
-.nav a.selected.hover{
-	color: rgb(114,18,170);
-	font-weight: bolder;
-}
+	.nav a.selected,
+	.nav a.selected.hover{
+		color: rgb(114,18,170);
+		font-weight: bolder;
+	}
 
-.dropdown-menu{
-	position: absolute;
-	display: none;
-	z-index: 1000;
+	.dropdown-menu{
+		position: absolute;
+		display: none;
+		z-index: 1000;
 
-	padding: 1px 0;
-	background-color: #000000;
-	border: 1px solid rgba(0, 0, 0, 0.2);
+		padding: 1px 0;
+		background-color: #000000;
+		border: 1px solid rgba(0, 0, 0, 0.2);
 	/*-webkit-border-radius: 6px;
 	border-radius: 6px;*/
 	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -232,6 +234,7 @@ table th{
 	text-align: left;
 }
 
+
 /***********************************************************
 -------------------------Schedule---------------------------
 ***********************************************************/
@@ -262,9 +265,7 @@ table th{
 /***********************************************************
 --------------------------Rosters--------------------------
 ***********************************************************/
-.roster p{
-	font-size: 16px;
-}
+
 
 
 /***********************************************************
@@ -275,9 +276,7 @@ table th{
 	width: 70%;
 }
 
-.teamPhoto{
-	width: 100%;
-}
+
 
 dl{
 	margin-left: 15%;
@@ -326,9 +325,9 @@ dt:first-child{
 }
 
 .social:after {
-  content: '';
-  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
-  display: inline-block;
+	content: '';
+	width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+	display: inline-block;
 }
 
 .social #facebook{
@@ -403,6 +402,7 @@ footer a{
 	header{
 		margin-top: 45px;
 		margin-bottom: 20px;
+		padding: 10px 0px;
 	}
 
 
@@ -417,8 +417,12 @@ footer a{
 
 	.main{
 		padding-bottom: 20px;
-		font-size: 12px;
-		line-height: 16px;
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	.teamPhoto{
+		width: 100%;
 	}
 
 	.social{
@@ -492,7 +496,7 @@ footer a{
 
 	.nav .dropdown-menu{
 		position: relative;
-		top: -37px;
+		top: -36px;
 		left: 99%;
 		display: none;
 		border-top: 0 none;
@@ -505,8 +509,8 @@ footer a{
 
 	.nav .dropdown-menu a {
 		border: 0 none;
-		font-size: 12px;
-		padding: 2% 5%;
+		font-size: 14px;
+		padding: 8px 7%;
 		font-weight: normal;
 	}
 	.nav li:hover .dropdown-menu {

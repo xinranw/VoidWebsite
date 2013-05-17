@@ -216,6 +216,7 @@ li:active .dropdown-menu{
 
 h1{
 	font-size: 26px;
+	line-height: 30px;
 	margin-bottom: 10px;
 }
 
@@ -392,8 +393,9 @@ footer a{
 
 	body{
 		background-image: url(../images/rallyCatch1.jpg);
-		background-size: 150%;
-		background-position: 65% 0%;
+		/*background-size: 150%;
+		background-position: 65% 0%;*/
+		background-size: cover;
 		background-repeat: no-repeat no-repeat;
 		background-attachment: fixed;
 	}
@@ -452,10 +454,10 @@ footer a{
 	-------------------------------------------------------- */
 
 	.nav {
-		width: 94%;
+		width: 90%;
 		position: absolute;
 		left: inherit;
-		background-color: rgba(0, 0, 0, .95); /* change the menu color #238be3 */
+		/*background-color: rgba(0, 0, 0, .95); /* change the menu color #238be3 */
 		display: block;
 		overflow: hidden;
 		box-shadow: 0 1px 2px rgba(0,0,0,.6);
@@ -464,12 +466,14 @@ footer a{
 
 	.nav li {
 		display: none;
-		width: 100%;
+		float: none;
+		width: 150px;
+		max-height: 36px;
+		background-color: rgba(0,0,0,.95);
 	}
 	.nav li a {
 		display: block;
-		width: 100%;
-		padding: 2% 5%;
+		padding: 8px 10px;
 		font-size: 14px;
 		font-weight: bold;
 		text-shadow: -1px -1px 0 rgba(0,0,0,.15);
@@ -488,29 +492,24 @@ footer a{
 
 	.nav .dropdown-menu{
 		position: relative;
-	}
-
-	.nav > li:hover > a {
-	}
-	.nav li.dropdown > a:after {
-		color: rgba(255,255,255,.5);
-		float: right;
-	}
-	.nav li.dropdown > a:hover {
-		background: rgba(0,0,0,.75);
-	}
-	.nav li ul {
+		top: -37px;
+		left: 99%;
 		display: none;
 		border-top: 0 none;
 		padding: 0;
 	}
-	.nav li ul a {
+	
+	.nav li.dropdown > a:hover {
+		background: rgba(0,0,0,.75);
+	}
+
+	.nav .dropdown-menu a {
 		border: 0 none;
 		font-size: 12px;
 		padding: 2% 5%;
 		font-weight: normal;
 	}
-	.nav li:hover ul {
+	.nav li:hover .dropdown-menu {
 		display: block;
 		border-top: 0 none;
 	}

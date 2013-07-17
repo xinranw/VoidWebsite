@@ -1,7 +1,16 @@
+@import url("default2.css");
+@import url("fullcalendar.css");
+@import url("nivo-slider2.css");
+@import url("unsemantic-grid-responsive.css");
+
 div, body, head, footer, p, h1, h2, h3, h4, ul, li, a, img, table{
 	margin: 0;
 	padding: 0;
 	/*border: 1px solid white;*/
+}
+
+body{
+	background: black;
 }
 
 .pull-right{
@@ -130,6 +139,7 @@ nav{
 	.nav a:hover,
 	.nav a:active{
 		color: rgb(114,18,170);
+		font-weight: bolder;
 	}
 
 	.nav a.selected,
@@ -232,6 +242,7 @@ table th{
 	padding: 2px 10px;
 	vertical-align: top;
 	text-align: left;
+	white-space: nowrap 	;
 }
 
 
@@ -239,14 +250,8 @@ table th{
 -------------------------Schedule---------------------------
 ***********************************************************/
 
-.calendar{
-	margin-top: 20px;
-	min-height: 500px;
-	width: 100%;
-}
-
 .content h2{
-	line-height: 21px;
+	line-height: 26px;
 }
 
 #results{
@@ -263,9 +268,41 @@ table th{
 }
 
 /***********************************************************
+-------------------------Calendar---------------------------
+***********************************************************/
+
+#calendar{
+	margin-top: 20px;
+	width: 100%;
+}
+
+
+/*.ui-icon{
+	background-image: url('../images/icons/fcIcons.png') !important;
+	display: block;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 50px;
+	border: 1px solid white;
+}
+.ui-icon-carat-1-w{
+	background-position: 0px 0px;
+}
+*/
+
+
+/***********************************************************
 --------------------------Rosters--------------------------
 ***********************************************************/
 
+.roster-table-container{
+	display: inline-block;
+}
+
+.roster-table{
+	display: block;
+}
 
 
 /***********************************************************
@@ -275,8 +312,6 @@ table th{
 .teamPhotoContainer{
 	width: 70%;
 }
-
-
 
 dl{
 	margin-left: 15%;
@@ -311,16 +346,16 @@ dt:first-child{
 .social{
 	margin: 0 auto;
 	line-height: 0px;
-	min-height: 52px;
+	min-height: 56px;
 	text-align: justify;
 }
 
 .social .icon{
 	display: inline-block;
-	background: url(../images/icons/socialMediaIcons.png) no-repeat 0 0;
-	background-size: 208px;
-	height: 52px;
-	width: 52px;
+	background: url(../images/icons/socialMediaIcons3.png) no-repeat 0 0;
+	background-size: 224px;
+	height: 56px;
+	width: 55px;
 	margin-bottom: 8px;
 }
 
@@ -330,25 +365,29 @@ dt:first-child{
 	display: inline-block;
 }
 
+.social a:hover{
+	opacity: 0.7;
+}
+
 .social #facebook{
-	background-position: 0 0;
+	background-position: 0 100%;
 }
 
 .social #twitter{
-	background-position: 33% 0;
+	background-position: 33.333% 100%;
 }
 
 .social #youtube{
-	background-position: 66.66666666% 0;
+	background-position: 66.6666666666% 100%;
 }
 
 .social #wordpress{
-	background-position: 100% 0;
+	background-position: 100% 100%;
 }
 
 .twitter-box{
 	float: right;
-	margin-top: 15px;
+	margin-top: 10px;
 	min-width: 0 !important;
 	width: 100%!important;
 }
@@ -479,7 +518,7 @@ footer a{
 		display: block;
 		padding: 8px 10px;
 		font-size: 14px;
-		font-weight: bold;
+		font-weight: bolder;
 		text-shadow: -1px -1px 0 rgba(0,0,0,.15);
 		border-top: 1px solid rgba(255,255,255,.2); 
 	}

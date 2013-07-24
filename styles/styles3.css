@@ -2,6 +2,11 @@
 @import url("fullcalendar.css");
 @import url("nivo-slider2.css");
 @import url("unsemantic-grid-responsive.css");
+@import url("../media_files/vlb_files0/visuallightbox.css");
+@import url("../media_files/vlb_files0/vlightbox0.css");
+@import url("../media_files/vlb_files2/vlightbox2.css");
+@import url("scrollable-buttons.css");
+@import url("scrollable-horizontal.css");
 
 div, body, head, footer, p, h1, h2, h3, h4, ul, li, a, img, table{
 	margin: 0;
@@ -19,6 +24,10 @@ body{
 
 .pull-center{
 	text-align: center;
+}
+
+.text-right{
+	text-align: right;
 }
 
 .alpha{
@@ -40,6 +49,15 @@ body{
 	border-right: 4px solid transparent;
 	border-left: 4px solid transparent;
 	margin-left: 2px;
+}
+
+.right-caret{
+	display: inline-block;
+	vertical-align: middle;
+	border-left: 4px solid #ffffff;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	margin-left: 4px;
 }
 
 a:hover .caret,
@@ -70,6 +88,14 @@ body a{
 	color: rgba(255, 255, 255, 0.85);
 	text-decoration: none;
 	font-weight: bold;
+}
+
+.container{
+	margin: 0 auto;
+}
+
+li{
+	list-style: none;
 }
 
 .unstyled{
@@ -177,7 +203,6 @@ li:active .dropdown-menu{
 	clear:both;
 	display: list-item;
 	position: relative;
-	list-style: none;
 	width:100%;
 	min-width: 140px;
 }
@@ -245,6 +270,9 @@ table th{
 	white-space: nowrap 	;
 }
 
+article{
+	margin: auto 0 ;
+}
 
 /***********************************************************
 -------------------------Schedule---------------------------
@@ -313,11 +341,19 @@ table th{
 	width: 70%;
 }
 
+
+/***********************************************************
+--------------------------Dropdowns-------------------------
+***********************************************************/
+
 dl{
-	margin-left: 15%;
-	margin-right: 15%;
 	border-top: 1px solid #c5c5c5;
 	border-bottom: 1px solid #c5c5c5;
+}
+
+dl.alumni_dropdown {
+	margin-left: 15%;
+	margin-right: 15%;
 }
 
 dt{
@@ -556,3 +592,100 @@ footer a{
 		display: block;
 		border-top: 0 none;
 	}
+}
+
+
+.photo_gallery{
+	background-color: rgb(16, 16, 16);
+	padding: 10px 10px 10px 10px;
+}
+
+#image_wrap {
+	/* dimensions */
+	/*width:640;*/
+	padding:15px 0;
+	
+	/* centered */
+	text-align:center;
+	
+	/* some "skinning" */
+	background-color:#000000;
+	border: 1px solid #3c3c3c;
+}
+
+#photos_dropdown .photos_clickables li{
+	cursor: pointer;
+}
+
+
+.scroll_panel{
+	margin: 0 auto;
+	height:120px;
+	position:relative;
+}
+/*
+root element for the scrollable.  when scrolling occurs this
+element stays still.
+*/
+
+.scroll_panel a.browse{
+	position: absolute;
+	background: url("../images/icons/fcIcons_black.png");
+	background-color: rgba(255,255,255,1);
+	background-size: 50em;
+	height: 14em;
+	width: 10em;
+	border-color: white;
+	border-style: solid;
+	border-top-width: 4em;
+	border-right-width: 4em;
+	border-bottom-width: 4em;
+	border-left-width: 4em;
+	z-index: 5;
+	margin: 0;
+	top: 40%;
+	opacity: .80;
+}
+
+.scroll_panel a.left{
+	left: -10px;
+}
+.scroll_panel a.right{
+	background-position: -10em 0;
+	right: -10px;	
+}
+
+.scroll_panel .scrollable {
+  /* required settings */
+  position:absolute;
+  overflow:hidden;
+  width:100%;
+  border: 0;
+}
+
+.scroll_panel .scrollable .items {
+  /* this cannot be too large */
+  width:20000em;
+  position:absolute;
+}
+ 
+.scroll_panel .scrollable img{
+	border: 4px solid #3b3b3b;
+	margin: 20px 10px 20px 0px
+}
+
+.scroll_panel .scrollable img.active{
+	border-color: #fff;
+}
+
+
+
+/*
+a single item. must be floated in horizontal scrolling.  typically,
+this element is the one that *you* will style the most.
+*/
+.items div {
+  float:left;
+  width: auto;
+}
+

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AutoPlay>true</AutoPlay>
+            <DescSliding>true</DescSliding>
+            <GalleryMultipleSuffix>1</GalleryMultipleSuffix>
+            <GalleryName>vlb1</GalleryName>
+            <GalleryOptionID>1</GalleryOptionID>
+            <HoverStart>false</HoverStart>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEngine>jquery</ImageEngine>
+            <ImageHeight>480</ImageHeight>
+            <ImageQuality>100</ImageQuality>
+            <ImageShrink>true</ImageShrink>
+            <ImageStretch>false</ImageStretch>
+            <ImageTemplate>13. Chrome</ImageTemplate>
+            <ImageTemplateName>Chrome</ImageTemplateName>
+            <ImageWidth>640</ImageWidth>
+            <PageBgColor>#000000</PageBgColor>
+            <PublishFileName>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/test/media.html</PublishFileName>
+            <PublishIndex>media.html</PublishIndex>
+            <PublishPath>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/test</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelPaths>false</RelPaths>
+            <ResizeSpeed>7</ResizeSpeed>
+            <RightClick>false</RightClick>
+            <SlideShow>true</SlideShow>
+            <SlideShowDelay>4</SlideShowDelay>
+            <ThumbColumns>0</ThumbColumns>
+            <ThumbFitImage>false</ThumbFitImage>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>180</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbTemplate>Caption_Slide</ThumbTemplate>
+            <ThumbTemplateName>Caption Slide</ThumbTemplateName>
+            <ThumbWidth>240</ThumbWidth>
+        </Settings>
+        <Images>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/Reg13_RallyCatch.jpg</url>
+                <title>Reg13_RallyCatch</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/FD12_TateCatch.jpg</url>
+                <title>FD12_TateCatch</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/Reg13_Kevo.jpg</url>
+                <title>Reg13_Kevo</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/Sec13_RallyD.jpg</url>
+                <title>Sec13_RallyD</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/Reg13_SuryaTateDump.jpg</url>
+                <title>Reg13_SuryaTateDump</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/BM13_ShieldsFlick.jpg</url>
+                <title>BM13_ShieldsFlick</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/Reg13_TateHartsoejpg.jpg</url>
+                <title>Reg13_TateHartsoejpg</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/Reg13_HartsoePivot.jpg</url>
+                <title>Reg13_HartsoePivot</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/Sec13_RallyFlick.jpg</url>
+                <title>Sec13_RallyFlick</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/Reg13_KaustubhTate.jpg</url>
+                <title>Reg13_KaustubhTate</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/Sec13_Oline.jpg</url>
+                <title>Sec13_Oline</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/Sec13_DLine.jpg</url>
+                <title>Sec13_DLine</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/BM13_RallyCatch.jpg</url>
+                <title>BM13_RallyCatch</title>
+            </Image>
+            <Image>
+                <url>E:/Dropbox/Docs/Penn/Web design/VoidWebsite/images/general_photos/2012-2013/field/SB13_Wiz.jpg</url>
+                <title>SB13_Wiz</title>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>

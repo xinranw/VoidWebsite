@@ -2,9 +2,6 @@
 @import url("fullcalendar.css");
 @import url("nivo-slider2.css");
 @import url("unsemantic-grid-responsive.css");
-@import url("../media_files/vlb_files0/visuallightbox.css");
-@import url("../media_files/vlb_files0/vlightbox0.css");
-@import url("../media_files/vlb_files2/vlightbox2.css");
 @import url("scrollable-buttons.css");
 @import url("scrollable-horizontal.css");
 
@@ -54,10 +51,9 @@ body{
 .right-caret{
 	display: inline-block;
 	vertical-align: middle;
-	border-left: 4px solid #ffffff;
-	border-top: 4px solid transparent;
-	border-bottom: 4px solid transparent;
-	margin-left: 4px;
+	border-left: 5px solid #ffffff;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
 }
 
 a:hover .caret,
@@ -141,47 +137,47 @@ nav{
 	content: "";
 	}*/
 
-	.nav{
-		position: relative;
-		/*left: 0;*/
-		display: block;
-		/*float: right;*/
-	}
+.nav{
+	position: relative;
+	/*left: 0;*/
+	display: block;
+	/*float: right;*/
+}
 
-	.nav li{
-		float: left;
-	}
+.nav li{
+	float: left;
+}
 
-	.nav a{ 
-		/*float: none;*/
-		padding: 10px 15px 10px 15px;
-		font-size: 18px;
-		text-decoration: none;
-		/*text-shadow: 0 1px 0 #ffffff;*/
-		display: block;
-	}
+.nav a{ 
+	/*float: none;*/
+	padding: 10px 15px 10px 15px;
+	font-size: 18px;
+	text-decoration: none;
+	/*text-shadow: 0 1px 0 #ffffff;*/
+	display: block;
+}
 
-	.nav a:focus,
-	.nav a:hover,
-	.nav a:active{
-		color: rgb(114,18,170);
-		font-weight: bolder;
-	}
+.nav a:focus,
+.nav a:hover,
+.nav a:active{
+	color: rgb(114,18,170);
+	font-weight: bolder;
+}
 
-	.nav a.selected,
-	.nav a.selected.hover{
-		color: rgb(114,18,170);
-		font-weight: bolder;
-	}
+.nav a.selected,
+.nav a.selected.hover{
+	color: rgb(114,18,170);
+	font-weight: bolder;
+}
 
-	.dropdown-menu{
-		position: absolute;
-		display: none;
-		z-index: 1000;
+.dropdown-menu{
+	position: absolute;
+	display: none;
+	z-index: 1000;
 
-		padding: 1px 0;
-		background-color: #000000;
-		border: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 1px 0;
+	background-color: #000000;
+	border: 1px solid rgba(0, 0, 0, 0.2);
 	/*-webkit-border-radius: 6px;
 	border-radius: 6px;*/
 	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -240,6 +236,7 @@ li:active .dropdown-menu{
 
 .main{
 	padding: 30px 10px 40px 10px;
+	min-height: 700px;
 	background: rgba(0, 0, 0, .85);
 	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .95));
 	background: -moz-linear-gradient(top, rgba(0, 0, 0, .7), rgba(0, 0, 0, .95)); /* Firefox 3.6 */
@@ -345,37 +342,34 @@ article{
 /***********************************************************
 --------------------------Dropdowns-------------------------
 ***********************************************************/
-
 dl{
-	border-top: 1px solid #c5c5c5;
-	border-bottom: 1px solid #c5c5c5;
+	cursor: pointer;
 }
 
 dl.alumni_dropdown {
+	border-top: 1px solid #c5c5c5;
+	border-bottom: 1px solid #c5c5c5;
 	margin-left: 15%;
 	margin-right: 15%;
 }
 
-dt{
-	cursor: pointer;
+dl.alumni_dropdown dt{
 	font-weight: bold;
 	font-size: 1.5em;
 	line-height: 2em;
 	border-top: 1px solid #c5c5c5;
 }
 
-dd{
+dl.alumni_dropdown dd{
 	margin: 0 auto 20px auto;
 }
 
-dt:first-child{
+dl.alumni_dropdown dt:first-child{
 	border-top: none;
 }
 /*dt:nth-last-child(2){
 	border-bottom: 1px solid #c5c5c5;
-	}*/
-
-
+}*/
 /***********************************************************
 ----------------------Twitter Widget------------------------
 ***********************************************************/
@@ -595,8 +589,18 @@ footer a{
 }
 
 
-.photo_gallery{
-	background-color: rgb(16, 16, 16);
+/*#media_sidebar_wrapper{
+	background-color: rgba(20, 20, 20, .9);
+	padding-top: 10px;
+}*/
+
+/*#media_sidebar_wrapper h2{
+	margin-left: 10px;
+	padding-bottom: 10px;
+}*/
+
+#photo_gallery{
+	background-color: rgba(20, 20, 20, .9);
 	padding: 10px 10px 10px 10px;
 }
 
@@ -617,11 +621,10 @@ footer a{
 	cursor: pointer;
 }
 
-
 .scroll_panel{
-	margin: 0 auto;
-	height:120px;
+	min-height: 82px;
 	position:relative;
+	margin: 20px auto 10px auto;
 }
 /*
 root element for the scrollable.  when scrolling occurs this
@@ -635,22 +638,39 @@ element stays still.
 	background-size: 50em;
 	height: 14em;
 	width: 10em;
-	border-color: white;
 	border-style: solid;
-	border-top-width: 4em;
-	border-right-width: 4em;
-	border-bottom-width: 4em;
-	border-left-width: 4em;
+	border-color: white;
+	border-top-width: 5em;
+	border-right-width: 5em;
+	border-bottom-width: 5em;
+	border-left-width: 5em;
 	z-index: 5;
 	margin: 0;
 	top: 40%;
 	opacity: .80;
 }
 
-.scroll_panel a.left{
+.scroll_panel a.browse:hover{
+	background: url("../images/icons/fcIcons_white.png");
+	background-color: rgba(0, 0, 0, 1);
+	background-size: 50em;
+	height: 14em;
+	width: 10em;
+	border-style: solid;
+	border-color: rgba(34, 34, 34, 1);
+	border-top-width: 5em;
+	border-right-width: 5em;
+	border-bottom-width: 5em;
+	border-left-width: 5em;
+	opacity: .75;
+}
+
+.scroll_panel a.left,
+.scroll_panel a.left:hover{
 	left: -10px;
 }
-.scroll_panel a.right{
+.scroll_panel a.right, 
+.scroll_panel a.right:hover{
 	background-position: -10em 0;
 	right: -10px;	
 }
@@ -661,6 +681,7 @@ element stays still.
   overflow:hidden;
   width:100%;
   border: 0;
+ 	height: 100%;
 }
 
 .scroll_panel .scrollable .items {
@@ -671,21 +692,91 @@ element stays still.
  
 .scroll_panel .scrollable img{
 	border: 4px solid #3b3b3b;
-	margin: 20px 10px 20px 0px
+	margin: 0px 10px 0px 0px
 }
 
 .scroll_panel .scrollable img.active{
 	border-color: #fff;
 }
 
-
-
-/*
-a single item. must be floated in horizontal scrolling.  typically,
-this element is the one that *you* will style the most.
-*/
 .items div {
   float:left;
   width: auto;
 }
 
+
+#media_sidebar_wrapper{
+	padding: 0 10px 0 10px;
+	background: rgba(20, 20, 20, 1);
+	line-height: 3em;
+}
+
+#media_sidebar h2{
+	padding: 10px 0 10px 0;
+}
+
+/* Hide radio button */
+#media_sidebar input{
+	display:none;
+}
+
+#media_sidebar li{
+	cursor: pointer;
+}
+
+/* Code for show/hide behavior */
+#media_sidebar .photos-dropdown .type-selector{
+	display:none;
+}
+#media_sidebar input:checked + label .type-selector{
+	display:block;
+}
+
+/* Code for linear-gradient borders */
+#media_sidebar .photos-dropdown .grad-border{
+	display: block;
+	position:relative;
+	z-index:5;	
+}
+#media_sidebar .photos-dropdown .grad-border:before{
+	position:absolute;
+	background-image: -webkit-linear-gradient(left, 
+		rgba(180, 180, 180, 0) 2%, 
+    rgba(180, 180, 180, .3) 10%, 
+    rgba(180, 180, 180, .65) 40%, 
+    rgba(180, 180, 180, .65) 60%, 
+    rgba(180, 180, 180, .3) 90%, 
+    rgba(180, 180, 180, 0) 98%);
+		);
+	content:"";
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	left: -1px;
+	z-index: -2;
+}
+#media_sidebar .photos-dropdown .grad-border:after{
+	position:absolute;
+	background:rgba(20, 20, 20, 1);
+	content:"";
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: -1;
+}
+#media_sidebar .photos-dropdown>.grad-border:last-of-type:before,
+#media_sidebar .photos-dropdown>.grad-border:last-of-type:after,
+#media_sidebar .photos-dropdown .type-selector:last-child .grad-border:last-of-type:before,
+#media_sidebar .photos-dropdown .type-selector:last-child .grad-border:last-of-type:after{
+	background:none;
+}
+
+#media_sidebar .photos-dropdown .right-caret{
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+#media_sidebar .photos-dropdown .type-selector li{
+	padding-left: 30px;
+}

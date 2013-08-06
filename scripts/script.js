@@ -4,7 +4,8 @@
   load_nav_button();
   highlight_nav_links();
   change_album();
-  setup_scrollable_gallery()
+  setup_scrollable_gallery();
+  set_first_image();
 })()
 
 
@@ -47,18 +48,15 @@ function highlight_nav_links(){
 }
 
 function change_album(){
-  links = $("#photos_dropdown li");
+  links = $(".photos-dropdown .type-selector li");
   links.each(function(){
     this.onclick = function(){
-      years = $(this).parents("dd").prev().text().replace("-", "_");
+      years = $(this).parents('label').attr('for');
       category = $(this).text().toLowerCase();
-      $(".photo_gallery").addClass("hide");
-      $("article[id=photos_"+years+"]").removeClass("hide");
+      $(".scrollable").addClass("hide");
+      $(".scrollable[id=photos_"+years+"]").removeClass("hide");
       $(".items").addClass("hide");
-      if (category == "old")
-        $("div[id=photos_old]").removeClass("hide");
-      else if (category == "field" || category == "social")
-        $("div[id=photos_"+years+"_"+category+"]").removeClass("hide");
+      $(".items[id=photos_"+years+"_"+category+"]").removeClass("hide");
       set_first_image();
     }
   });
@@ -103,10 +101,14 @@ function setup_scrollable_gallery(){
 
     
   });
-  // when page loads simulate a "click" on the first image
-  set_first_image();
+  $(".photos-dropdown .type-selector:first li:first").click();
+  
 }
 
 function set_first_image(){
-  $(".items:not(.hide) img").filter(":first").click()
+  console.trace()
+  // $(".photos-dropdown .type-selector:first>li:first").click();
+  // $(".photos-dropdown .type-selector:first li:first").click();
+  $(".items:not(.hide) img").first().click();
+
 }

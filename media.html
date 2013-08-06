@@ -73,78 +73,125 @@
 
   <div class="content grid-container">
     <section class="main grid-parent grid-85 prefix-10 postfix-5">
-      <aside class="grid-25">
-        <dl id="photos_dropdown">
-          <dt class="pull-center">2012-2013</dt>
-          <dd>
-            <ul class="photos_clickables">
-              <li>Field<span class="right-caret"></li>
-              <li>Social<span class="right-caret"></li>
-            </ul>
-          </dd>
-          <dt class="pull-center">2011-2012</dt>
-          <dd>
-            <ul class="photos_clickables">
-              <li>Field<span class="right-caret"></li>
-              <li>Social<span class="right-caret"></li>
-            </ul>
-          </dd>
-          <dt class="pull-center">Old</dt>
-          <dd>
-            <ul class="photos_clickables">
-              <li>Old<span class="right-caret"></li>
-            </ul>
-          </dd>
-        </dl>
-      </aside>
-      <article class="grid-75 photo_gallery" id="photos_2012_2013">
-        <div id="image_wrap" style="opacity: 1;">
-          <img/>
+      <aside class="grid-30" id="media_sidebar">
+        <div id="media_sidebar_wrapper">
+          <h2>Void through the Years</h2>
+          <ul class="photos-dropdown">
+            <input type="radio" name="year" id="2012_2013">
+            <label for="2012_2013" class="grad-border">
+              <li>
+                <span class="right-caret"></span>
+                2012 - 2013
+              </li>
+              <ul class="type-selector">
+                <li class="grad-border">Field</li>
+                <li class="grad-border">Social</li>
+              </ul>
+            </label>
+            <input type="radio" name="year" id="old">
+            <label for="old" class="grad-border">
+              <li>
+                <span class="right-caret"></span>
+                Old
+              </li>
+              <ul class="type-selector">
+                <li class="grad-border">Field</li>
+                <li class="grad-border">Social</li>
+              </ul>
+            </label>
+          </ul>
         </div>
-        <div class="scroll_panel">
-          <a class="prev browse left"></a>
-          <div class="scrollable" id="scrollable">
-            <div class="items default_items" id="photos_2012_2013_field">
-              <div>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/reg13_rallycatch.jpg" alt="Reg13_RallyCatch"/>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/fd12_tatecatch.jpg" alt="FD12_TateCatch"/>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/reg13_kevo.jpg" alt="Reg13_Kevo"/>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/sec13_rallyd.jpg" alt="Sec13_RallyD"/>
-              </div>
-              <div>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/reg13_suryatatedump.jpg" alt="Reg13_SuryaTateDump"/>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/bm13_shieldsflick.jpg" alt="BM13_ShieldsFlick"/>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/reg13_tatehartsoejpg.jpg" alt="Reg13_TateHartsoejpg"/>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/reg13_hartsoepivot.jpg" alt="Reg13_HartsoePivot"/>
-              </div>
-              <div>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/sec13_rallyflick.jpg" alt="Sec13_RallyFlick"/>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/reg13_kaustubhtate.jpg" alt="Reg13_KaustubhTate"/>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/sec13_oline.jpg" alt="Sec13_Oline"/>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/sec13_dline.jpg" alt="Sec13_DLine"/>
-              </div>
-              <div>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/bm13_rallycatch.jpg" alt="BM13_RallyCatch"/>
-                <img src="images/general_photos/photos_2012_2013/field/thumbnails/sb13_wiz.jpg" alt="SB13_Wiz"/>
-              </div>
-            </div>
-            <div class="items" id="photos_2012_2013_social">
-              <div>
-                <img src="images/general_photos/photos_2012_2013/social/thumbnails/13_skeetermonsterzachdinner.jpg" alt="13_SkeeterMonsterZachDinner"/>
-                <img src="images/general_photos/photos_2012_2013/social/thumbnails/13_venoidmadmex.jpg" alt="13_VenoidMadMex"/>
-                <img src="images/general_photos/photos_2012_2013/social/thumbnails/13_voidtable.jpg" alt="13_VoidTable"/>
-                <img src="images/general_photos/photos_2012_2013/social/thumbnails/db13_rallyhimalaya.jpg" alt="DB13_RallyHimalaya"/>
-                <img src="images/general_photos/photos_2012_2013/social/thumbnails/db13_rallytatesurya.jpg" alt="DB13_RallyTateSurya"/>
-              </div>
-              <div>
-                <img src="images/general_photos/photos_2012_2013/social/thumbnails/fling13_watermelonchallenge.jpg" alt="Fling13_WatermelonChallenge"/>
-                <img src="images/general_photos/photos_2012_2013/social/thumbnails/sb13_cocacolabear.jpg" alt="SB13_CocaColaBear"/>
-                <img src="images/general_photos/photos_2012_2013/social/thumbnails/sb13_dinner.jpg" alt="SB13_Dinner"/>
-                <img src="images/general_photos/photos_2012_2013/social/thumbnails/sb13_dinner2.jpg" alt="SB13_Dinner2"/>
-              </div>
-            </div>
+      </aside>
+      <article class="grid-70">
+        <div id="photo_gallery">
+          <div id="image_wrap" style="opacity: 1;">
+            <img/>
           </div>
-          <a class="next browse right"></a>
+          <div class="scroll_panel">
+            <a class="prev browse left"></a>
+            <div class="scrollable" id="photos_2012_2013">
+              <div class="items default_items" id="photos_2012_2013_field">
+                <div>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/reg13_rallycatch.jpg" alt="Reg13_RallyCatch"/>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/fd12_tatecatch.jpg" alt="FD12_TateCatch"/>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/reg13_kevo.jpg" alt="Reg13_Kevo"/>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/sec13_rallyd.jpg" alt="Sec13_RallyD"/>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/reg13_suryatatedump.jpg" alt="Reg13_SuryaTateDump"/>
+                </div>
+                <div>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/bm13_shieldsflick.jpg" alt="BM13_ShieldsFlick"/>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/reg13_tatehartsoejpg.jpg" alt="Reg13_TateHartsoejpg"/>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/reg13_hartsoepivot.jpg" alt="Reg13_HartsoePivot"/>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/sec13_rallyflick.jpg" alt="Sec13_RallyFlick"/>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/reg13_kaustubhtate.jpg" alt="Reg13_KaustubhTate"/>
+                </div>
+                <div> 
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/sec13_oline.jpg" alt="Sec13_Oline"/>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/sec13_dline.jpg" alt="Sec13_DLine"/>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/bm13_rallycatch.jpg" alt="BM13_RallyCatch"/>
+                  <img src="images/general_photos/photos_2012_2013/field/thumbnails/sb13_wiz.jpg" alt="SB13_Wiz"/>
+                </div>
+              </div>
+              <div class="items" id="photos_2012_2013_social">
+                <div>
+                  <img src="images/general_photos/photos_2012_2013/social/thumbnails/13_skeetermonsterzachdinner.jpg" alt="13_SkeeterMonsterZachDinner"/>
+                  <img src="images/general_photos/photos_2012_2013/social/thumbnails/13_venoidmadmex.jpg" alt="13_VenoidMadMex"/>
+                  <img src="images/general_photos/photos_2012_2013/social/thumbnails/13_voidtable.jpg" alt="13_VoidTable"/>
+                  <img src="images/general_photos/photos_2012_2013/social/thumbnails/db13_rallyhimalaya.jpg" alt="DB13_RallyHimalaya"/>
+                  <img src="images/general_photos/photos_2012_2013/social/thumbnails/db13_rallytatesurya.jpg" alt="DB13_RallyTateSurya"/>
+                </div>
+                <div>
+                  <img src="images/general_photos/photos_2012_2013/social/thumbnails/fling13_watermelonchallenge.jpg" alt="Fling13_WatermelonChallenge"/>
+                  <img src="images/general_photos/photos_2012_2013/social/thumbnails/sb13_cocacolabear.jpg" alt="SB13_CocaColaBear"/>
+                  <img src="images/general_photos/photos_2012_2013/social/thumbnails/sb13_dinner.jpg" alt="SB13_Dinner"/>
+                  <img src="images/general_photos/photos_2012_2013/social/thumbnails/sb13_dinner2.jpg" alt="SB13_Dinner2"/>
+                </div>
+              </div>
+            </div>
+            <div class="scrollable" id="photos_old">
+              <div class="items" id="photos_old_field">
+                <div>
+                  <img src="images/general_photos/photos_old/field/thumbnails/team_photo.jpg" alt="team_photo"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/gensel.jpg" alt="gensel"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/gensel2.jpg" alt="gensel2"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/gensel3.jpg" alt="gensel3"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/meju.jpg" alt="meju"/>
+                </div>
+                <div>
+                  <img src="images/general_photos/photos_old/field/thumbnails/meju2.jpg" alt="meju2"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/yale1.jpg" alt="yale1"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/yale2.jpg" alt="yale2"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/yale3.jpg" alt="yale3"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/yale4.jpg" alt="yale4"/>
+                </div>
+                <div>
+                  <img src="images/general_photos/photos_old/field/thumbnails/yale5.jpg" alt="yale5"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/yale6.jpg" alt="yale6"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/yale7.jpg" alt="yale7"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/yale8.jpg" alt="yale8"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/yale9.jpg" alt="yale9"/>
+                </div>
+                <div>
+                  <img src="images/general_photos/photos_old/field/thumbnails/alan_pivot.jpg" alt="alan_pivot"/>
+                  <img src="images/general_photos/photos_old/field/thumbnails/blackandwhiteninjas.jpg" alt="blackandwhiteninjas"/>
+                </div>
+              </div>
+              <div class="items" id="photos_old_social">
+                <div>
+                  <img src="images/general_photos/photos_old/social/thumbnails/dingleramona.jpg" alt="dingleramona"/>
+                  <img src="images/general_photos/photos_old/social/thumbnails/fun2004.jpg" alt="fun2004"/>
+                  <img src="images/general_photos/photos_old/social/thumbnails/jim.jpg" alt="jim"/>
+                  <img src="images/general_photos/photos_old/social/thumbnails/mejubeer.jpg" alt="mejubeer"/>
+                  <img src="images/general_photos/photos_old/social/thumbnails/ambiance.jpg" alt="ambiance"/>
+                </div>
+                <div>
+                  <img src="images/general_photos/photos_old/social/thumbnails/ben.jpg" alt="ben"/>
+                  <img src="images/general_photos/photos_old/social/thumbnails/dinglediana.jpg" alt="dinglediana"/>
+                </div>
+              </div>
+            </div>
+            <a class="next browse right"></a>
+          </div>
         </div>
       </article>
     </section>

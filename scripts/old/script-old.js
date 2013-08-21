@@ -1,6 +1,6 @@
 (function autorun(){
   setup_dropdowns();
-  add_slider_effect();
+  set_up_homepage_slider();
   load_nav_button();
   highlight_nav_links();
   change_album();
@@ -20,12 +20,44 @@ function setup_dropdowns(){
   })
 }
 
-
-
-function add_slider_effect(){
-  $('#slider').nivoSlider({
-    effect: 'fade',
-    controlNav: false,
+function set_up_homepage_slider(){
+  Galleria.loadTheme('../Frameworks, Icons, Demos/Photo viewers/galleria/themes/classic/galleria.classic.min.js');
+  Galleria.run('#home_page_slider', {
+    dummy: 'images/teamPhotos/void2013.jpg',
+    showCounter: false,
+    autoplay: 3000,
+    carousel: false,
+    showImagenav: true,
+    carousel: false,
+    showInfo: false,
+    pauseOnInteraction: true,
+    imageCrop: "height",
+    imageMargin: 0,
+    extend: function(){
+      var gallery = this; // "this" is the gallery instance
+      this.bind(Galleria.IMAGE, function(e) {
+        var current = gallery.getData(gallery.getIndex());
+        var currImg = current.original;
+        if (currImg.className == "video"){
+          $('#title_text').hide();       
+        } else {
+          var titleText = $(currImg).attr('title');
+          if ($('#title_text').length){
+            $('#title_text').show();
+            $('#title_text').text(titleText);
+          } else
+          $('.galleria-stage').append('<span id="title_text">' + titleText + '</span>');
+        }
+      });
+      // hide thumbnails (thumbnails: false doesn't work)
+      $('.galleria-thumbnails-container').hide();
+    }
+  });
+  // display video info (doesn't work if above the extend function for some reason)
+  Galleria.configure({
+    youtube: {
+      showInfo: 1
+    }
   })
 }
 
@@ -106,9 +138,6 @@ function setup_scrollable_gallery(){
 }
 
 function set_first_image(){
-  console.trace()
-  // $(".photos-dropdown .type-selector:first>li:first").click();
-  // $(".photos-dropdown .type-selector:first li:first").click();
   $(".items:not(.hide) img").first().click();
 
 }

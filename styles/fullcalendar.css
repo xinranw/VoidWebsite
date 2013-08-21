@@ -259,7 +259,7 @@ html .fc,
 	 
 .fc-event {
 	border: 1px solid rgba(0, 129, 194, .4); /*#3a87ad;*/ /* default BORDER color */
-	background-color: rgba(0, 129, 194, .4); /*#3a87ad;*/ /* default BACKGROUND color */
+	background-color: rgba(114,18,170,.4); /*#3a87ad;*/ /* default BACKGROUND color */
 	color: #fff;               /* default TEXT color */
 	font-size: .85em;
 	cursor: default;

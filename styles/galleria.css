@@ -1,0 +1,17 @@
+#home_page_slider {
+  height: 452px;
+  background: #000; }
+  #home_page_slider .galleria-stage {
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px; }
+    #home_page_slider .galleria-stage #title_text {
+      position: absolute;
+      bottom: 0px;
+      color: white;
+      background: rgba(30, 30, 30, 0.9);
+      width: 100%;
+      padding: 6px 0px 6px 10px;
+      line-height: 18px;
+      z-index: 100; }

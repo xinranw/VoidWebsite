@@ -1,7 +1,7 @@
 class AutoRun
-  constructor: ()->
+  constructor: (page_name)->
     this.setup_dropdowns()
-    this.setup_homepage_slider()
+    this.setup_homepage_slider() if (page_name == "index")
     this.load_nav_button()
     this.highlight_nav_links()
     this.change_album()

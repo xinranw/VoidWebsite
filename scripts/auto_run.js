@@ -3,9 +3,11 @@
   var AutoRun;
 
   AutoRun = (function() {
-    function AutoRun() {
+    function AutoRun(page_name) {
       this.setup_dropdowns();
-      this.setup_homepage_slider();
+      if (page_name === "index") {
+        this.setup_homepage_slider();
+      }
       this.load_nav_button();
       this.highlight_nav_links();
       this.change_album();

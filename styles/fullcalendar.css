@@ -147,12 +147,12 @@ html .fc,
 	
 .fc-state-default { /* non-theme */
 	border: 1px solid;
-	}
+}
 
 .fc-state-default.fc-corner-left { /* non-theme */
 	border-top-left-radius: 0px; /*4px*/
 	border-bottom-left-radius: 0px;
-	}
+}
 
 .fc-state-default.fc-corner-right { /* non-theme */
 	border-top-right-radius: 0px;
@@ -198,7 +198,7 @@ html .fc,
 */
 
 .fc-state-default {
-	background-color: none; /*#f5f5f5;*/
+	background-color: inherit; /*#f5f5f5;*/
 	border: none;
 	/*background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
@@ -561,7 +561,7 @@ table.fc-border-separate {
 	
 .fc .ui-draggable-dragging .fc-event-bg, /* TODO: something nicer like .fc-opacity */
 .fc-select-helper .fc-event-bg {
-	display: none\9; /* for IE6/7/8. nested opacity filters while dragging don't work */
+	display: none; /* for IE6/7/8. nested opacity filters while dragging don't work */
 	}
 	
 /* resizable */

@@ -1,12 +1,33 @@
 class AutoRun
-  constructor: (page_name)->
+  constructor: (@page_name)->
+    this.add_header()
     this.setup_dropdowns()
-    this.setup_homepage_slider() if (page_name == "index")
+    this.setup_homepage_slider() if (@page_name == "index")
     this.load_nav_button()
-    this.highlight_nav_links()
+    # this.highlight_nav_links()
     this.change_album()
     this.setup_scrollable_gallery()
     AutoRun.set_first_image()
+
+  @set_first_image: ()->
+    $(".items:not(.hide) img").first().click()
+
+  @highlight_nav_links: ()->
+    $(()-> 
+      url = $(location).attr('href')
+      start = url.lastIndexOf('/') + 1
+      linkName = url.substring(start)
+      link = $('a[href$="' + linkName + '"]')
+      link.addClass("selected")
+      link.parents(".dropdown").children('a[href$="#"]').addClass("selected")
+    )
+
+  add_header: ()=>
+    $.get('partials/_header.html', (data)->
+      $('header').html(data)
+      AutoRun.highlight_nav_links()
+    , 'html')
+    # $('header').load('partials/_header.html')
 
   setup_dropdowns: ()->
     $('dd').filter(':nth-child(n+2)').addClass('hide')
@@ -61,18 +82,7 @@ class AutoRun
     $(".nav-button").click(()-> 
       $(".nav-button,.nav").toggleClass("open"))
 
-  highlight_nav_links: ()->
-    find_a: (text)-> 
-      return $(this).text() == text
-    url = $(location).attr('href')
-    start = url.lastIndexOf('/') + 1
-    linkName = url.substring(start)
-    link = $('a[href$="' + linkName + '"]')
-    link.addClass("selected")
-    link.parents(".dropdown").children('a[href$="#"]').addClass("selected")
-
-  @set_first_image: ()->
-    $(".items:not(.hide) img").first().click()
+  
 
   change_album: ()->
     links = $(".photos-dropdown .type-selector li")

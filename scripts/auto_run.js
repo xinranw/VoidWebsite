@@ -11,6 +11,8 @@
       this.setup_dropdowns();
       if (this.page_name === "index") {
         this.setup_homepage_slider();
+      } else if (this.page_name === "videos") {
+        this.setup_videos_slider();
       }
       this.load_nav_button();
       this.change_album();
@@ -79,6 +81,27 @@
               }
             }
           });
+          return $('.galleria-thumbnails-container').hide();
+        }
+      });
+      return Galleria.configure({
+        youtube: {
+          showInfo: 1
+        }
+      });
+    };
+
+    AutoRun.prototype.setup_videos_slider = function() {
+      Galleria.loadTheme('scripts/classic/galleria.classic.min.js');
+      Galleria.run('#videos_slider', {
+        dummy: 'images/teamPhotos/void2013.jpg',
+        showCounter: false,
+        autoplay: false,
+        showImagenav: true,
+        carousel: false,
+        showInfo: false,
+        pauseOnInteraction: true,
+        extend: function() {
           return $('.galleria-thumbnails-container').hide();
         }
       });

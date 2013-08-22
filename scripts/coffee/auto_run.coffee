@@ -2,7 +2,10 @@ class AutoRun
   constructor: (@page_name)->
     this.add_header()
     this.setup_dropdowns()
-    this.setup_homepage_slider() if (@page_name == "index")
+    if (@page_name == "index")
+      this.setup_homepage_slider()
+    else if (@page_name == "videos")
+      this.setup_videos_slider()
     this.load_nav_button()
     # this.highlight_nav_links()
     this.change_album()
@@ -71,6 +74,30 @@ class AutoRun
           $('.galleria-thumbnails-container').hide()
       }
     )
+    # display video info (doesn't work if above the extend function for some reason)
+    Galleria.configure({
+      youtube: {
+        showInfo: 1
+      }
+    })
+
+  setup_videos_slider: ()->
+    Galleria.loadTheme('scripts/classic/galleria.classic.min.js')
+    Galleria.run('#videos_slider', 
+      {
+        dummy: 'images/teamPhotos/void2013.jpg',
+        showCounter: false,
+        autoplay: false,
+        showImagenav: true,
+        carousel: false,
+        showInfo: false,
+        pauseOnInteraction: true,
+        extend: ()->
+          # hide thumbnails (thumbnails: false doesn't work)
+          $('.galleria-thumbnails-container').hide()
+      }
+    )
+
     # display video info (doesn't work if above the extend function for some reason)
     Galleria.configure({
       youtube: {

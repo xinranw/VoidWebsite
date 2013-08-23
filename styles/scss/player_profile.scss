@@ -1,0 +1,42 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+#player_profile{
+  #photo_container{
+    #player_photo{
+      width: 100%;
+      border: 1px solid rgba(200, 200, 200, 0.5);
+      padding: 4px;
+      background-color: rgb(20, 20, 20);
+    }
+  }
+
+  #info{
+    #data{
+      margin: 14px 0 0 0 ;
+      display: inline-block;
+
+      dd, dt{
+        float: left;
+      }
+
+      dt{
+        width: 40%;
+        text-align: right;
+        padding-right: 5%;
+        font-weight: bold;
+      }
+
+      dd{
+        width: 60%;
+        margin: 0;
+      }
+    }
+
+    #description{
+
+    }
+    
+  }
+}

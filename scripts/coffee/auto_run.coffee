@@ -1,15 +1,24 @@
 class AutoRun
+  # keys correlate to @page_name
+  auto_run_functions = {
+    index : ()->
+      AutoRun.setup_homepage_slider()
+    videos : ()->
+      AutoRun.setup_videos_slider()
+    photos : ()->
+      AutoRun.setup_dropdowns()
+    alumni : ()->
+      AutoRun.setup_dropdowns()
+    player_profile : ()->
+      AutoRun.setup_player_profile()
+    }
+
   constructor: (@page_name)->
-    this.add_header()
-    this.setup_dropdowns()
-    if (@page_name == "index")
-      this.setup_homepage_slider()
-    else if (@page_name == "videos")
-      this.setup_videos_slider()
-    this.load_nav_button()
-    # this.highlight_nav_links()
-    this.change_album()
-    this.setup_scrollable_gallery()
+    AutoRun.add_header()  
+    auto_run_functions[@page_name]() if @page_name?
+    AutoRun.load_nav_button()
+    AutoRun.change_album()
+    AutoRun.setup_scrollable_gallery()
     AutoRun.set_first_image()
 
   @set_first_image: ()->
@@ -25,14 +34,14 @@ class AutoRun
       link.parents(".dropdown").children('a[href$="#"]').addClass("selected")
     )
 
-  add_header: ()=>
+  @add_header: ()=>
     $.get('partials/_header.html', (data)->
       $('header').html(data)
       AutoRun.highlight_nav_links()
     , 'html')
     # $('header').load('partials/_header.html')
 
-  setup_dropdowns: ()->
+  @setup_dropdowns: ()->
     $('dd').filter(':nth-child(n+2)').addClass('hide')
     $('dl').on('mousedown', 'dt', ()-> 
       $(this)
@@ -42,7 +51,7 @@ class AutoRun
       .slideUp(200)
       )
 
-  setup_homepage_slider: ()->
+  @setup_homepage_slider: ()->
     Galleria.loadTheme('scripts/classic/galleria.classic.min.js')
     Galleria.run('#home_page_slider', 
       {
@@ -81,7 +90,7 @@ class AutoRun
       }
     })
 
-  setup_videos_slider: ()->
+  @setup_videos_slider: ()->
     Galleria.loadTheme('scripts/classic/galleria.classic.min.js')
     Galleria.run('#videos_slider', 
       {
@@ -105,13 +114,13 @@ class AutoRun
       }
     })
 
-  load_nav_button: ()->
+  @load_nav_button: ()->
     $(".nav-button").click(()-> 
       $(".nav-button,.nav").toggleClass("open"))
 
   
 
-  change_album: ()->
+  @change_album: ()->
     links = $(".photos-dropdown .type-selector li")
     links.each(()-> 
       this.onclick = ()=> 
@@ -124,7 +133,7 @@ class AutoRun
         AutoRun.set_first_image()
         )
 
-  setup_scrollable_gallery: ()->
+  @setup_scrollable_gallery: ()->
     $(".items:not(.default_items)").addClass("hide")
 
     $(".scrollable").scrollable()
@@ -162,5 +171,19 @@ class AutoRun
     )
 
     $(".photos-dropdown .type-selector:first li:first").click()
+
+  @setup_player_profile: ()->
+    $(document).ready(()->
+      void2014 = new Void2014
+      roster = void2014.getTeamRoster().getRoster()
+      name = $('#player_profile #info #name').text()
+      player = roster[name]
+      $.each(player.getData(), (key, val)->
+        $('dl#data').append("<dt>" + capitalizeSentence(key) + "</dt><dd>" + val + "</dd>")
+        )
+      $('#description').text(player.getDescription())
+      $('#player_photo').attr("src", player.getImg())
+      )
+
 
 this.AutoRun = AutoRun

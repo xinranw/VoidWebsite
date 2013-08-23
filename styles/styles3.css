@@ -4,6 +4,7 @@
 @import url("scrollable-buttons.css");
 @import url("scrollable-horizontal.css");
 @import url("player_profile.css");
+@import url("freshmen.css");
 
 div, body, head, footer, p, h1, h2, h3, h4, ul, li, a, img, table{
 	margin: 0;
@@ -89,10 +90,10 @@ body a{
 .container{
 	margin: 0 auto;
 }
-
+/*
 li{
 	list-style: none;
-}
+}*/
 
 .unstyled{
 	list-style: none;
@@ -114,7 +115,7 @@ header{
 }
 
 .logo-image{
-	background-image: url('../images/voidLogo.png');
+	background-image: url('../images/voidLogo_small.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center center;

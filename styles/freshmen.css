@@ -1,0 +1,17 @@
+#freshmen_info_link {
+  padding: 10px 10px 0px 10px;
+  margin-top: 10px; }
+  #freshmen_info_link h3 a {
+    color: #aab0e4; }
+
+#freshmen h1, #freshmen h2 {
+  color: #aab0e4; }
+#freshmen ul#events {
+  padding-left: 10px; }
+#freshmen ul#links .placeholder {
+  color: #aaa; }
+#freshmen ul#links input[type="email"] {
+  font-size: 16px;
+  margin-left: 10px; }
+#freshmen ul li {
+  padding-bottom: 4px; }

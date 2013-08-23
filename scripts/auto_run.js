@@ -20,6 +20,9 @@
       },
       player_profile: function() {
         return AutoRun.setup_player_profile();
+      },
+      freshmen: function() {
+        return AutoRun.setup_email_input();
       }
     };
 
@@ -70,7 +73,7 @@
       Galleria.run('#home_page_slider', {
         dummy: 'images/teamPhotos/void2013.jpg',
         showCounter: false,
-        autoplay: 3000,
+        autoplay: 4000,
         showImagenav: true,
         carousel: false,
         showInfo: false,
@@ -185,6 +188,32 @@
         });
         $('#description').text(player.getDescription());
         return $('#player_photo').attr("src", player.getImg());
+      });
+    };
+
+    AutoRun.setup_email_input = function() {
+      return $('[placeholder]').focus(function() {
+        var input;
+        input = $(this);
+        if (input.val() === input.attr('placeholder')) {
+          input.val('');
+          return input.removeClass('placeholder');
+        }
+      }).blur(function() {
+        var input;
+        input = $(this);
+        if (input.val() === '' || input.val() === input.attr('placeholder')) {
+          input.addClass('placeholder');
+          return input.val(input.attr('placeholder'));
+        }
+      }).blur().parents('form').submit(function() {
+        return $(this).find('[placeholder]').each(function() {
+          var input;
+          input = $(this);
+          if (input.val() === input.attr('placeholder')) {
+            return input.val('');
+          }
+        });
       });
     };
 

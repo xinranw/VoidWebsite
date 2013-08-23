@@ -11,6 +11,8 @@ class AutoRun
       AutoRun.setup_dropdowns()
     player_profile : ()->
       AutoRun.setup_player_profile()
+    freshmen: ()->
+      AutoRun.setup_email_input()
     }
 
   constructor: (@page_name)->
@@ -57,7 +59,7 @@ class AutoRun
       {
         dummy: 'images/teamPhotos/void2013.jpg',
         showCounter: false,
-        autoplay: 3000,
+        autoplay: 4000,
         showImagenav: true,
         carousel: false,
         showInfo: false,
@@ -184,6 +186,25 @@ class AutoRun
       $('#description').text(player.getDescription())
       $('#player_photo').attr("src", player.getImg())
       )
+
+  @setup_email_input: ()->
+    $('[placeholder]').focus(()->
+      input = $(this);
+      if input.val() == input.attr('placeholder')
+        input.val('')
+        input.removeClass('placeholder')  
+    ).blur(()->
+      input = $(this)
+      if input.val() == '' || input.val() == input.attr('placeholder')
+        input.addClass('placeholder')
+        input.val(input.attr('placeholder'))
+    ).blur().parents('form').submit(()->
+      $(this).find('[placeholder]').each(()-> 
+        input = $(this)
+        if input.val() == input.attr('placeholder')
+          input.val('')
+      )
+    )
 
 
 this.AutoRun = AutoRun

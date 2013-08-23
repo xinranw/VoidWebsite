@@ -1,0 +1,39 @@
+#freshmen_info_link{
+  padding: 10px 10px 0px 10px;
+  margin-top: 10px;
+  h3{
+    a{
+      color: rgb(170,176,228);
+    }
+  }
+}
+
+#freshmen{
+  h1, h2{
+    color: rgb(170,176,228);
+  }
+
+  ul#events{
+    padding-left: 10px;
+  }
+
+  ul#links{
+    .placeholder
+    {
+      color: #aaa;
+    }
+    input[type="email"]{
+      font-size: 16px;
+      margin-left: 10px;
+      // height: 24px;
+      // vertical-align: middle;
+    }
+
+  }
+
+  ul{
+    li{
+      padding-bottom: 4px;
+    }
+  }
+}

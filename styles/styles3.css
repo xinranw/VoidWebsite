@@ -634,8 +634,8 @@ element stays still.
 	background: url("../images/icons/fcIcons_black.png");
 	background-color: rgba(255,255,255,1);
 	background-size: 50em;
-	height: 14em;
-	width: 10em;
+	height: 25em;
+	width: 20em;
 	border-style: solid;
 	border-color: white;
 	border-top-width: 5em;
@@ -644,7 +644,7 @@ element stays still.
 	border-left-width: 5em;
 	z-index: 5;
 	margin: 0;
-	top: 40%;
+	top: 33%;
 	opacity: .80;
 }
 
@@ -652,8 +652,8 @@ element stays still.
 	background: url("../images/icons/fcIcons_white.png");
 	background-color: rgba(0, 0, 0, 1);
 	background-size: 50em;
-	height: 14em;
-	width: 10em;
+	height: 25em;
+	width: 20em;
 	border-style: solid;
 	border-color: rgba(34, 34, 34, 1);
 	border-top-width: 5em;

@@ -32,7 +32,6 @@
       if (this.page_name != null) {
         auto_run_functions[this.page_name]();
       }
-      AutoRun.load_nav_button();
       AutoRun.change_album();
       AutoRun.setup_scrollable_gallery();
       AutoRun.set_first_image();
@@ -57,7 +56,8 @@
     AutoRun.add_header = function() {
       return $.get('partials/_header.html', function(data) {
         $('header').html(data);
-        return AutoRun.highlight_nav_links();
+        AutoRun.highlight_nav_links();
+        return AutoRun.load_nav_button();
       }, 'html');
     };
 
@@ -132,7 +132,7 @@
 
     AutoRun.load_nav_button = function() {
       return $(".nav-button").click(function() {
-        return $(".nav-button,.nav").toggleClass("open");
+        return $(".nav-button, .nav").toggleClass("open");
       });
     };
 

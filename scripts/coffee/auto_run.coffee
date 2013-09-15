@@ -18,7 +18,6 @@ class AutoRun
   constructor: (@page_name)->
     AutoRun.add_header()  
     auto_run_functions[@page_name]() if @page_name?
-    AutoRun.load_nav_button()
     AutoRun.change_album()
     AutoRun.setup_scrollable_gallery()
     AutoRun.set_first_image()
@@ -40,6 +39,7 @@ class AutoRun
     $.get('partials/_header.html', (data)->
       $('header').html(data)
       AutoRun.highlight_nav_links()
+      AutoRun.load_nav_button()
     , 'html')
     # $('header').load('partials/_header.html')
 
@@ -118,9 +118,8 @@ class AutoRun
 
   @load_nav_button: ()->
     $(".nav-button").click(()-> 
-      $(".nav-button,.nav").toggleClass("open"))
-
-  
+      $(".nav-button, .nav").toggleClass("open")
+      )
 
   @change_album: ()->
     links = $(".photos-dropdown .type-selector li")
